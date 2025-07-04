@@ -1,10 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>NKV Driving Institute</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NKV Driving Institute | Coimbatore</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to NKV Driving Institute</h1>
-  <p>This is a test homepage.</p>
+  <header>
+    
+  <h1>NKV Driving Institute</h1>
+  <p id="tagline"></p>
+
+<script>
+const text = "Designing your driving...";
+let i = 0;
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("tagline").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 80);
+  }
+}
+typeEffect();
+</script>
+
+  </header>
+
+  <div class="hero">
+    <img src="download.jpg" alt="NKV Driving Institute Card">
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      NKV Driving Institute, based in Coimbatore, is committed to transforming individuals into confident,
+      responsible, and skilled drivers. With over a decade of experience in the driving education industry,
+      our institute has earned a reputation for excellence, personalized training, and advanced driving methods.
+    </p>
+  </section>
+
+  <section id="benefits">
+    <h2>Why Choose Us?</h2>
+    <div class="benefits">
+      <div class="card"><h3>Personalized Coaching</h3><p1>1‑on‑1 training in your own car to simulate real conditions.</p1></div>
+      <div class="card"><h3>Defensive Driving</h3><p2>Learn proactive hazard awareness and emergency braking skills.</p2></div>
+      <div class="card"><h3>Subconscious Skills</h3><p3>Develop stress-free driving habits that last a lifetime.</p3></div>
+      <div class="card"><h3>Experience-Rich Trainers</h3><p4>Our instructors bring 20+ years of experience to each session.</p4></div>
+    </div>
+  </section>
+
+  <section id="syllabus">
+    <h2>Course Syllabus</h2>
+    <ul class="syllabus">
+      <li>Pre driving class (Theory -1)</li>
+      <li>Clutch biting and balancing point</li>
+      <li>Brake control (in hump)</li>
+      <li>Steering Balance control</li>
+      <li>Gear shifting upto 3rd</li>
+      <li>Gear shifting upto 4th</li>
+      <li>Gear shifting upto 5th</li>
+      <li>Test class</li>
+      <li>One hand driving control</li>
+      <li>U-Turn steering control</li>
+      <li>Theory Session-2</li>
+      <li>Turning class</li>
+      <li>Cut & Street road</li>
+      <li>Highway class & flyover class</li>
+      <li>Traffic Class</li>
+      <li>Reverse & parking</li>
+    </ul>
+  </section>
+
+  <section id="locations">
+    <h2>We Serve Coimbatore Areas</h2>
+    <div class="locations">
+      <div class="card">Saibaba Colony</div>
+      <div class="card">R.S. Puram</div>
+      <div class="card">Kavundampalayam</div>
+      <div class="card">Vadavalli</div>
+      <div class="card">Edayarpalayam</div>
+      <div class="card">G N Mills</div>
+      <div class="card">Thadagam</div>
+      <div class="card">Kanuvai</div>
+      <div class="card">Thudiyalur</div>
+    </div>
+  </section>
+  <section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="nkv teach.jpg"alt="Instructor Teaching" onclick="openImage(this.src)"/>
+    <img src="nkv 1.jpg" alt="Theory Session " onclick="openImage(this.src)" />
+    <img src="nkv 2.jpg" alt="Test during the Theory session" onclick="openImage(this.src) "/>
+    <img src="nkv 3.jpg" alt="Institute " onclick="openImage(this.src) " />
+    <img src="nkv4.jpg" alt="Our Institute" onclick="openImage(this.src) "/>
+    <img src="nkv 5.jpg" alt="Driving cars" onclick="openImage(this.src) "/>
+    </div>
+    <br><br>
+</section>
+<!-- Lightbox Popup Container -->
+<div id="popup" class="popup" onclick="closeImage()">
+  <img id="popup-img" src="">
+</div>
+
+
+
+  <section class="license-services">
+    <h2>License Related Services</h2>
+    <ul class="car-bullets">
+      <li>2-wheeler license</li>
+      <li>4-wheeler license</li>
+      <li>Refreshing Course</li>
+      <li>4-wheeler driving with license</li>
+      <li>Badge license</li>
+      <li>Duplicate license</li>
+      <li>License original renewal</li>
+      <li>Change of address in license</li>
+      <li>Change of name in license</li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <p>
+      📞 <a href="tel:+918428111020">+91‑8428‑111020</a>, <a href="tel:+918428609178">+91‑8428‑609178</a><br />
+      ✉️ <a href="mailto:nkvdrivinginstitute@gmail.com">nkvdrivinginstitute@gmail.com</a><br />
+      📍 NO 7, Lakshmi Nagar 2nd Street, Kavundampalayam to Edayarpalayam Road, Coimbatore 641025
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NKV Driving Institute | Coimbatore</p>
+  </footer>
+  <!-- Lightbox viewer -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+  <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border:5px solid white;" onclick="closeLightbox()" />
+</div>
+<button onclick="topFunction()" id="topBtn">⬆️ Top</button>
+
+
+<script>
+  function openImage(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function thankUser() {
+    alert("Thanks for enrolling! We'll reach out soon.");
+  }
+  <script>
+  const text = "Your Road to Confidence Begins Here";
+  let i = 0;
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("tagline").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 70);
+    }
+  }
+  typeEffect();
+</script>
+
+</script>
+
+<!-- Attach the function to a button -->
+<button onclick="thankUser()">Send</button>
+<script>
+  function openImage(src) {
+    document.getElementById("popup-img").src = src;
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closeImage() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
