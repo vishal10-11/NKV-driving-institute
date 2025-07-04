@@ -1,0 +1,273 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+p{
+  background-color: yellowgreen;
+  color:orangered
+}
+header {
+  background:yellowgreen;
+  color: orangered;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.card {
+  background-color:orangered;       /* Soft yellow background */
+  color: black;                  /* Deep red text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Lightbox Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}/* Lightbox Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+
+.popup img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img {
+  width: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+
+.card:hover {
+  transform: translateY(-5px);     /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: orangered;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:orangered;
+  background-color: yellowgreen;
+}
+
+.hero img {
+  max-width: 90%;
+  max-height: 300px;
+}
+.hero {
+  background: rgba(0,0,0,0.05);
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img {
+  max-width: 90%;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.benefits, .locations {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: orange;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Syllabus List */
+ul.syllabus {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  color: red(229, 255, 0);
+  background-color:yellowgreen;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  list-style: decimal inside;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+ul.syllabus {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+ color: red;
+  background-color: yellowgreen;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  list-style: disc inside;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.car-bullets {
+  list-style: none; /* 🚫 This removes the default red bullet dots */
+  padding-left: 1.2em;
+}
+
+.car-bullets li::before {
+  content: "🚗";
+  color: red; /* customize the car color */
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  display: none;
+  border: none;
+  background: yellowgreen;
+  color:orangered;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* License Services Section */
+.license-services {
+  background-color: yellowgreen; /* lighter yellow */
+  color: red; /* lighter red */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.license-services ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.p1{
+  color:yellow ;
+}
+.license-services h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Responsive Grid */
+@media (max-width: 600px) {
+  .benefits, .locations {
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+  background-color: yellowgreen; /* soft light yellow */
+  color: orange; /* dark red */
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  line-height: 1.8;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+}
